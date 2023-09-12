@@ -10,6 +10,19 @@ body {
     margin-top: 50px; /* Margen superior */
 }
 
+/* style.css */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.img-background {
+    position: fixed;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
 /* Estilos para el boton "Si" */
 #si {
     font-size: 20px; /* Tamaño de fuente */
