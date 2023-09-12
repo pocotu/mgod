@@ -2,7 +2,7 @@
 const botonNo = document.getElementById('no');
 const botonSi = document.getElementById('si');
 
-// Agrega un evento "mouseenter" al botón "No"
+// Agrega un evento "mouseenter" al boton "No"
 // "mouseenter" se activa cuando el cursor del mouse ingresa al area de un elemento
 botonNo.addEventListener('mouseenter', () => {
     // Genera coordenadas X e Y aleatorias dentro de los limites de la ventana
@@ -49,7 +49,7 @@ function getRandomValue(min, max) {
     return Math.random() * (max - min) + min;
 }
 
-// Función para mostrar y ocultar una imagen de forma aleatoria
+// Funcion para mostrar y ocultar una imagen de forma aleatoria
 function toggleImage(imageId) {
     const image = document.getElementById(imageId);
 
