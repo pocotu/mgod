@@ -117,11 +117,55 @@ body {
     color: white; /* Nuevo color del texto al pasar el mouse */
 }
 
-/* Estilos para todas las imágenes */
-img {
-    max-width: 100%; /* Evita que las imágenes se desborden */
-    height: auto; /* Mantiene la relación de aspecto */
+/* estilos de michi */
+/* Estilos para la imagen */
+#image {
+    width: 100px; /* Cambia el ancho */
+    height: 90px; /* Cambia la altura */
+    position: fixed;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 1s;
 }
+
+#image2 {
+    width: 100px; 
+    height: 90px; 
+    position: fixed;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+#image3 {
+    width: 55px; 
+    height: 45px; 
+    position: fixed;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+#image4 {
+    width: 100px; 
+    height: 90px; 
+    position: fixed;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+#image5 {
+    width: 55px; 
+    height: 45px; 
+    position: fixed;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+
+/* */
 
 /* Media queries para diseños responsivos en diferentes tamaños de pantalla */
 @media (max-width: 768px) { /* Estilos para pantallas pequeñas, como smartphones */

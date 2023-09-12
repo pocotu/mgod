@@ -37,7 +37,67 @@ botonSi.addEventListener('click', () => {
     // Agrega un evento "click" al boton de cierre en la ventana emergente
     const closeButton = document.getElementById('close-popup');
     closeButton.addEventListener('click', () => {
-        // Elimina la ventana emergente del cuerpo del documento al hacer clic en el botón de cierre
+        // Elimina la ventana emergente del cuerpo del documento al hacer clic en el boton de cierre
         document.body.removeChild(customPopup);
     });
 });
+
+/////// Gatitos aleatorios ///////
+
+// Funcion para generar un valor aleatorio entre un rango
+function getRandomValue(min, max) {
+    return Math.random() * (max - min) + min;
+}
+
+// Función para mostrar y ocultar una imagen de forma aleatoria
+function toggleImage(imageId) {
+    const image = document.getElementById(imageId);
+
+    // Genera coordenadas X e Y aleatorias dentro de los limites de la ventana
+    const randomX = getRandomValue(0, window.innerWidth - image.clientWidth);
+    const randomY = getRandomValue(0, window.innerHeight - image.clientHeight);
+
+    // Asigna las coordenadas para posicionar la imagen
+    image.style.left = randomX + 'px';
+    image.style.top = randomY + 'px';
+
+    // Muestra la imagen
+    image.style.opacity = 1;
+
+    // Espera un tiempo y luego oculta gradualmente la imagen
+    setTimeout(() => {
+        image.style.opacity = 0;
+    }, 2000); // Cambia este valor para ajustar la velocidad de desaparicion
+}
+
+// Llama a la funcion para mostrar y ocultar cada imagen cada cierto intervalo de tiempo
+setInterval(() => {
+    toggleImage('image');
+    toggleImage('image2');
+    toggleImage('image3');
+    toggleImage('image4');
+    toggleImage('image5');
+}, 3000); // Cambia este valor para ajustar la frecuencia de aparicion
+
+
+/* para un solo gatito */
+//// Funcion para mostrar y ocultar la imagen de forma aleatoria
+//function toggleImage() {
+//    const image = document.getElementById('random-image');
+//
+//    // Genera coordenadas X e Y aleatorias dentro de los limites de la ventana
+//    const randomX = getRandomValue(0, window.innerWidth - image.clientWidth);
+//    const randomY = getRandomValue(0, window.innerHeight - image.clientHeight);
+//
+//    // Asigna las coordenadas para posicionar la imagen
+//    image.style.left = randomX + 'px';
+//    image.style.top = randomY + 'px';
+//
+//    // Muestra la imagen
+//    image.style.opacity = 1;
+//
+//    // Espera un tiempo y luego oculta gradualmente la imagen
+//    setTimeout(() => {
+//        image.style.opacity = 0;
+//    }, 2000); // Cambia este valor para ajustar la velocidad de desaparicion
+//}
