@@ -1,77 +1,134 @@
+/* Estilos generales para el cuerpo de la página */
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
+    font-family: Arial, sans-serif; /* Fuente predeterminada */
+    text-align: center; /* Centro el texto horizontalmente */
 }
 
+/* Estilos para el mensaje de pregunta */
 #pregunta {
-    font-size: 24px;
-    margin-top: 50px;
+    font-size: 30px; /* Tamaño de fuente */
+    margin-top: 50px; /* Margen superior */
 }
 
-#si, #no {
-    font-size: 18px;
-    margin: 20px;
-    padding: 10px 20px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
+/* Estilos para el boton "Si" */
+#si {
+    font-size: 20px; /* Tamaño de fuente */
+    padding: 10px 25px; /* Relleno en pixeles */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar el mouse */
+    border: none; /* Sin bordes */
+    border-radius: 5px; /* Esquinas redondeadas */
+    text-align: center; /* Centro el texto horizontalmente */
+    margin: 0 auto; /* Centra horizontalmente en la pantalla */
+    position: absolute; /* Posicionamiento absoluto */
+    top: 65%; /* Distancia desde la parte superior */
+    left: 46%; /* Distancia desde la izquierda */
+    transform: translate(-50%, -50%); /* Centra el boton en si mismo */
 }
 
+/* Estilos para el boton "No" */
 #no {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: 0.5s;
+    font-size: 20px; /* Tamaño de fuente */
+    padding: 10px 20px; /* Relleno en pixeles */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar el mouse */
+    border: none; /* Sin bordes */
+    border-radius: 5px; /* Esquinas redondeadas */
+    text-align: center; /* Centro el texto horizontalmente */
+    margin: 0 auto; /* Centra horizontalmente en la pantalla */
+    position: absolute; /* Posicionamiento absoluto */
+    top: 65%; /* Distancia desde la parte superior */
+    left: 54%; /* Distancia desde la izquierda */
+    transform: translate(-50%, -50%); /* Centra el boton en si mismo */
+    transition: 0.5s; /* Transición suave al pasar el mouse */
 }
 
+/* Efecto de desplazamiento para el boton "No" al pasar el mouse */
 #no:hover {
-    left: 70%;
+    left: 70%; /* Nueva posición al pasar el mouse */
 }
 
+/* Contenedor para la imagen GIF */
+#gif-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+}
+
+/* Estilos para la imagen GIF */
+#gif-container img {
+    max-width: 100%; /* Evita que la imagen se desborde */
+    height: auto; /* Mantiene la relación de aspecto */
+}
+
+/* Contenedor para los botones "Si" y "No" */
+#botones-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    margin-top: 20px; /* Margen superior */
+}
+
+/* Estilos para la ventana emergente personalizada */
 .custom-popup {
-    position: fixed;
+    position: fixed; /* Posicionamiento fijo para cubrir toda la pantalla */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    z-index: 9999; /* Capa superior */
 }
 
+/* Estilos para el contenido de la ventana emergente */
 .popup-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    text-align: center;
+    background-color: white; /* Fondo blanco */
+    padding: 20px; /* Relleno en píxeles */
+    border-radius: 5px; /* Esquinas redondeadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    text-align: center; /* Centro el texto horizontalmente */
 }
 
+/* Estilos para el texto dentro de la ventana emergente */
 .popup-content p {
-    font-size: 24px;
-    margin: 0;
+    font-size: 24px; /* Tamaño de fuente */
+    margin: 0; /* Elimina el margen */
 }
 
+/* Estilos para el botón dentro de la ventana emergente */
 .popup-content button {
-    font-size: 18px;
-    margin-top: 20px;
-    padding: 10px 20px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: white;
+    font-size: 18px; /* Tamaño de fuente */
+    margin-top: 20px; /* Margen superior */
+    padding: 10px 20px; /* Relleno en píxeles */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar el mouse */
+    border: none; /* Sin bordes */
+    border-radius: 5px; /* Esquinas redondeadas */
+    background-color: #007bff; /* Color de fondo */
+    color: white; /* Color del texto */
 }
 
+/* Efecto de cambio de color al pasar el mouse sobre el botón */
 .popup-content button:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Nuevo color de fondo al pasar el mouse */
 }
 
+/* Efecto de cambio de color al pasar el mouse sobre el botón "Si" */
 #si:hover {
-    background-color: #00cc00;
-    color: white; 
+    background-color: #00cc00; /* Nuevo color de fondo al pasar el mouse */
+    color: white; /* Nuevo color del texto al pasar el mouse */
 }
 
+/* Estilos para todas las imágenes */
+img {
+    max-width: 100%; /* Evita que las imágenes se desborden */
+    height: auto; /* Mantiene la relación de aspecto */
+}
+
+/* Media queries para diseños responsivos en diferentes tamaños de pantalla */
+@media (max-width: 768px) { /* Estilos para pantallas pequeñas, como smartphones */
+}
+
+@media (min-width: 769px) and (max-width: 1024px) { /* Estilos para tabletas */
+}
+
+@media (min-width: 1025px) { /* Estilos para pantallas grandes, como escritorios */
+}
